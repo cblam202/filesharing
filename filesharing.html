@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chanh Lam's file sharing</title>
+  <meta name="description" content="File sharing page">
+  <meta name="author" content="Chanh Bao Lam">
+
+  <meta name="theme-color" content="#512888">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Merriweather', Georgia, serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #000;
+      background-color: #faf7fc;
+    }
+
+    h1 {
+      margin-bottom: 0.4em;
+      -webkit-text-stroke: 0.5px #000;
+    }
+
+    h2 {
+      margin-top: 2em;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.2em;
+    }
+
+    a {
+      color: #512888;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e6e0ef;
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .file-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ede7f6;
+      color: #512888;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.95em;
+      border: 1px solid #d7cdea;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      border-color: #512888;
+    }
+
+    .site-footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.95em;
+      margin-top: 2.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><b>Chanh Lam's file sharing</b></h1>
+
+  <div class="card">
+    <p>This is where I share files for various purposes.</p>
+
+    <h2>Downloads</h2>
+    <div class="file-row">
+      <span><b>week10_correlation.xlsx</b></span>
+      <a class="btn" href="week10_correlation.xlsx" download>Download</a>
+    </div>
+
+    <h2>Return to Homepage</h2>
+    <p>
+      <a class="btn" href="https://cblam202.github.io/home">cblam202.github.io/home</a>
+    </p>
+  </div>
+
+  <footer class="site-footer">
+    &copy; <span id="year"></span> Chanh Bao Lam
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
