@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chanh Lam's file sharing</title>
+  <title>Chanh Lam file sharing</title>
   <meta name="description" content="File sharing page">
   <meta name="author" content="Chanh Bao Lam">
 
@@ -13,7 +13,7 @@
 
   <style>
     body {
-      font-family: 'Merriweather', Georgia, serif;
+      font-family: "Merriweather", Georgia, serif;
       max-width: 800px;
       margin: auto;
       padding: 20px;
@@ -47,15 +47,23 @@
       border: 1px solid #e6e0ef;
       border-radius: 8px;
       padding: 14px 16px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     }
 
+    /* Row with description on the left and files on the right */
     .file-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
+      align-items: flex-start;
+      gap: 12px;
       margin-top: 8px;
+    }
+
+    .file-actions {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-end;
     }
 
     .btn {
@@ -67,6 +75,7 @@
       text-decoration: none;
       font-size: 0.95em;
       border: 1px solid #d7cdea;
+      white-space: nowrap;
     }
 
     .btn:hover {
@@ -84,20 +93,38 @@
 </head>
 
 <body>
-  <h1><b>Chanh Lam's file sharing</b></h1>
+  <h1><b>Lam Repository</b></h1>
 
   <div class="card">
-    <p>This is where I share files for various purposes.</p>
+    <p>
+      Welcome to my file sharing page. This is where I share resources for various purposes. I hope you find them helpful.
+    </p>
 
     <h2>Downloads</h2>
+
     <div class="file-row">
-      <span><b>week10_correlation.xlsx</b></span>
-      <a class="btn" href="files/week10_correlation.xlsx" download>Download</a>
+      <span>
+        <b>Teaching demonstration, January 22, 2026</b>
+      </span>
+
+      <div class="file-actions">
+        <a class="btn"
+          href="files/edci_913_weeks_10_12.pdf"
+          target="_blank"
+          rel="noopener">
+          edci_913_weeks_10_12.pdf
+        </a>
+        <a class="btn" href="files/week10_correlation.xlsx" download>
+          week10_correlation.xlsx
+        </a>
+      </div>
     </div>
 
     <h2>Return to Homepage</h2>
     <p>
-      <a class="btn" href="https://cblam202.github.io/home">cblam202.github.io/home</a>
+      <a class="btn" href="https://cblam202.github.io/home">
+        cblam202.github.io/home
+      </a>
     </p>
   </div>
 
@@ -106,7 +133,7 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
